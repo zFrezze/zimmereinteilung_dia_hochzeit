@@ -11,74 +11,14 @@
       width: 100%;
       background: #000; /* Hintergrund schwarz */
     }
-    #login, #content {
-      display: none;
-      height: 100%;
-      width: 100%;
-    }
-    #login {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background: #f0f0f0;
-    }
-    input, button {
-      padding: 10px;
-      font-size: 18px;
-      margin: 5px;
-    }
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
-    .topbar {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 10;
-    }
-    .topbar button {
-      padding: 8px 14px;
-      font-size: 14px;
-    }
   </style>
 </head>
 <body>
-  <!-- Login -->
-  <div id="login">
-    <h2>🔒 Passwort eingeben</h2>
-    <input type="password" id="pw" placeholder="Passwort">
-    <button onclick="checkPassword()">Öffnen</button>
-  </div>
-
-  <!-- Inhalt -->
-  <div id="content">
-    <div class="topbar">
-      <button onclick="logout()">🔐 Sperren</button>
-    </div>
-    <iframe src="Zimmereinteilung_dia_hochzeit.pdf"></iframe>
-  </div>
-
-  <script>
-    const correctPassword = "hochzeit2025"; // Ihr Passwort hier ändern
-
-    function checkPassword() {
-      const entered = document.getElementById("pw").value;
-      if (entered === correctPassword) {
-        document.getElementById("login").style.display = "none";
-        document.getElementById("content").style.display = "block";
-      } else {
-        alert("Falsches Passwort!");
-      }
-    }
-
-    function logout() {
-      document.getElementById("content").style.display = "none";
-      document.getElementById("login").style.display = "flex";
-      document.getElementById("pw").value = "";
-    }
-  </script>
+  <iframe src="Zimmereinteilung_dia_hochzeit.pdf"></iframe>
 </body>
 </html>
